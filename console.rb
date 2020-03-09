@@ -15,9 +15,14 @@ cinema= Cinema.new(room_sizes)
 
 film1= Film.new({'title'=>'Jack and Jill', 'price'=>5})
 film2= Film.new({'title'=>'Miami Connection', 'price'=>8})
+film3= Film.new({'title'=>'The Room', 'price'=>10})
+film4= Film.new({'title'=>'Princess Mononoke', 'price'=>9})
+
 
 film1.save()
 film2.save()
+film3.save()
+film4.save()
 
 customer1= Customer.new({'name'=>'Viper', 'funds'=>50})
 customer2= Customer.new({'name'=>'Jim Bob', 'funds'=>90})
@@ -31,7 +36,7 @@ ticket_screening1= Screening.customer_buys_ticket(customer1, film1, '20:30',cine
 ticket_screening2= Screening.customer_buys_ticket(customer2, film1, '18:30',cinema, 2)
 ticket_screening3= Screening.customer_buys_ticket(customer2, film1, '20:30',cinema, 1)
 
-ticket_screening4= Screening.customer_buys_ticket(customer3, film1, '17:00', cinema,1)
+ticket_screening4= Screening.customer_buys_ticket(customer3, film2, '17:00', cinema,1)
 
 Ticket.display_all_customers_by_film(film1.id)
 
